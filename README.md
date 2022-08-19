@@ -1,4 +1,8 @@
 # myblog
+|日付|作業内容|
+|--|--|
+|0818|設計図作成|
+|0819|RegistページとLoginページの基本作成|
 
 
 ##　ユースケース図
@@ -22,11 +26,6 @@ vscodeからgithub 提交手顺
 3. commit 写上提交的主题
 4. push 到GitHub  views and More Actions
 5. 预览 *右上第三个图标 Open preview
-
-|日付|作業内容|
-|--|--|
-|0818|設計図作成|
-|0819|Registe画面とLogin画面の作成|
 
 
 
