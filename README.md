@@ -4,6 +4,7 @@
 |0818|設計図作成|
 |0819|RegisterページとLoginページの基本作成|
 |0822|RegisterページとLoginページの完成とmyBlogの基本作成|
+|0823|myblogページとblogPictureページ及びblogEditorページの作成|
 
 
 ##　ユースケース図
