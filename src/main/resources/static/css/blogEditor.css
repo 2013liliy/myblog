@@ -1,0 +1,55 @@
+body{
+  background-image: url(https://beiz.jp/images_P/white/white_00025.jpg);
+}
+#title_text{
+  font-size: 30px;
+  background-color:rgba(166, 205, 205, 0.904);
+}
+#frame{
+  margin: auto;
+  margin-top: 5%;
+  width: 900px;
+  border-style: double;
+  background-color: aquamarine;
+}
+.submit_color{
+  background-color: rgba(158, 158, 230, 0.904);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+}
+#submit_text{
+  width: 10%;
+  font-size: 23px;
+  margin: auto;
+}
+#title{
+  width: 70%;
+  font-size: 23px;
+  text-align: right;
+  margin-right:0;
+  margin-left: 10%;
+}
+#content_introduction{
+  width: 70%;
+  text-align: right;
+  margin-right: 0;
+  margin-left: 10%;
+  font-size: 18px;
+}
+#Edit_content{
+  width: 70%;
+  text-align: right;
+  margin-right: 0;
+  margin-left: 7%;
+  font-size: 22px;
+}
+.content{
+  height: 5350px;
+  min-height:350px;
+  max-height: 300px;
+  min-width: 70%;
+  max-width: 70%;
+
+}
+
+  

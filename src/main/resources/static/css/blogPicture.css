@@ -1,0 +1,17 @@
+body{
+  background-image: url(https://beiz.jp/images_P/white/white_00025.jpg);
+}
+.picture{
+  position: relative;
+  left: 9%;
+  width: 600px;
+  height: 700px; 
+}
+.picture_left{
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+
+
+
