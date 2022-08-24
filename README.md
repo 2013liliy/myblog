@@ -5,6 +5,7 @@
 |0819|RegisterページとLoginページの基本作成|
 |0822|RegisterページとLoginページの完成とmyBlogの基本作成|
 |0823|myblogページとblogPictureページ及びblogEditorページの作成|
+|0824|フロントエンドの完成、バックエンド（Model）とデータベースの基本作成|
 
 
 ##　ユースケース図
