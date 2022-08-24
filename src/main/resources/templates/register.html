@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <title>Hi</title>
     <link rel="stylesheet" href="../static/css/register.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="../static/js/register.js"></script>
+
 </head>
 
 <body>
@@ -11,27 +16,28 @@
         <div id="text_4" style="text-align: center">
             <h4 id="text_2">Register</h4>
             <p id="text_1"> Please fill in this form to create an account.</p>
+            <p id="message">Passwords do not match</p>
             <hr>
             <form action="./login.html" method="post">
                 <div id="a"> 
                     <label  for="userName">UserName:</label>
                     <br>
-                    <input  id="userName" type="text" name="userName" placeholder="Enter Email">
+                    <input  id="userName" type="text" name="userName" placeholder="UserName">
                     <br>
                     <br>
-                    <label  for="pwd">Password：</label>
+                    <label  for="password">Password：</label>
                     <br>
-                    <input id="pwd" type="password" name="password" placeholder="Enter Password">
+                    <input id="password" type="password" name="password" placeholder="Enter Password">
                     <br>
                     <br>
-                    <label for="Repeat Password">Repeat Password：</label>
+                    <label for="repeat_password">Repeat Password：</label>
                     <br>
-                    <input id="pwd" type="Repeat Password" name="Repeat Password" placeholder="Repeat Psaaword">
+                    <input id="repeat_password" type="password" name="repeat_password" placeholder="Repeat Psaaword">
                 </div>
                 <br>
                 <hr>
                 <div class="class_1">
-                    <input type="submit" value="Register">
+                    <input id="submit" type="submit" value="Register">
                 </div>
                 <p  class="class_1">Already have an account?<a href="login.html">Sign in.</a></p>
             </form>
