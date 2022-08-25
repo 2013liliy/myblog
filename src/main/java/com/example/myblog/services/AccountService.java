@@ -4,8 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.myblog.models.Account;
+import com.example.myblog.repositories.AccountRepository;
 
-import ONeW.Spring.repositories.AccountRepository;
+
 
 @Service
 public class AccountService {
@@ -31,21 +32,8 @@ public class AccountService {
 		}
 
 	}
-	public boolean passwordMatch(String password,String repeatPassword) {
-		if(password.equals(repeatPassword)){
-			return true;
-		}else {
-			return false;
-		}
-	}
-    public boolean isExist(String username) {
-    	if(repository.findByUsername(username)!=null) {
-    		return true;
-    	}	else {
-    		return false;
-    	}
-    	
+	
     		
-    }
+    
 	
 }

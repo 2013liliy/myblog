@@ -12,14 +12,12 @@ public class Blog {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@Column
-	private String theme;
+	private String title;
 	@Column
 	private String content;
 
-	public Blog(Long id, String theme, String content) {
-		super();
-		this.id = id;
-		this.theme = theme;
+	public Blog(String theme, String content) {
+	    this.title = title;
 		this.content = content;
 	}
 
@@ -35,12 +33,12 @@ public class Blog {
 		this.id = id;
 	}
 
-	public String getTheme() {
-		return theme;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTheme(String theme) {
-		this.theme = theme;
+	public void setTitle(String theme) {
+		this.title = title;
 	}
 
 	public String getContent() {

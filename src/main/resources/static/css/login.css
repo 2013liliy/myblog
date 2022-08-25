@@ -23,3 +23,6 @@ body {background-image:url(https://img.ixintu.com/download/jpg/202107/384dc8281d
   background-attachment: fixed;
   background-position: 0%;
 }
+#error{
+	color:red;
+}
