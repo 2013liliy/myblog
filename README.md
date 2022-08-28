@@ -6,7 +6,8 @@
 |0822|RegisterページとLoginページの完成とmyBlogの基本作成|
 |0823|myblogページとblogPictureページ及びblogEditorページの作成|
 |0824|フロントエンドの完成、バックエンド（Model）とデータベースの基本作成|
-|0825|バックエンドのRegister・Loginデータベースの接続、blog基本作成|
+|0825|バックエンドのRegisterページはデータベースに保存、Loginページはアカウントとパスワードの検証。blog基本作成|
+|0826|blogEditorページはデータベースに保存、Blog内容の表示は考え中|
 
 
 ##　ユースケース図

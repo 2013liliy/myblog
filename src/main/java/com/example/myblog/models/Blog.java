@@ -16,7 +16,7 @@ public class Blog {
 	@Column
 	private String content;
 
-	public Blog(String theme, String content) {
+	public Blog(String title, String content) {
 	    this.title = title;
 		this.content = content;
 	}
@@ -37,7 +37,7 @@ public class Blog {
 		return title;
 	}
 
-	public void setTitle(String theme) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
