@@ -1,10 +1,7 @@
 package com.example.myblog.models;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,9 +25,9 @@ public class Account {
 	public Account() {
 
 	}
-	
-	//@OneToMany(fetch=FetchType.LAZY,mappedBy="account_username")
-	//private  List<Blog>blogs;
+
+	// @OneToMany(fetch=FetchType.LAZY,mappedBy="account_username")
+	// private List<Blog>blogs;
 
 	public Long getId() {
 		return id;

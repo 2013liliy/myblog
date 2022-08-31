@@ -1,28 +1,37 @@
-#test-1{
-  color:cornflowerblue;
+#test-1 {
+	color: cornflowerblue;
 }
-#test-2{
-  text-align:center
+
+#test-2 {
+	text-align: center
 }
-#a{
-  margin :auto; 
-  width :278px;
+
+#a {
+	margin: auto;
+	width: 278px;
 }
-.class_1{
-  text-align:center 
+
+.class_1 {
+	text-align: center
 }
-.class_2{
-  text-align:center 
+
+.class_2 {
+	text-align: center
 }
-.class_4{
-  text-align:center 
+
+.class_4 {
+	text-align: center
 }
-body {background-image:url(https://img.ixintu.com/download/jpg/202107/384dc8281d5ae330424c31e064853acf_800_600.jpg!con);
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-attachment: fixed;
-  background-position: 0%;
+
+body {
+	background-image:
+		url(https://img.ixintu.com/download/jpg/202107/384dc8281d5ae330424c31e064853acf_800_600.jpg!con);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 0%;
 }
-#error{
-	color:red;
+
+#error {
+	color: red;
 }

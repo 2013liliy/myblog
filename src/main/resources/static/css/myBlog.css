@@ -1,42 +1,75 @@
-#picture_size{
-  position: relative; 
-  border: solid;
-  border-radius:50%;
-  right: 15%;
+#picture_size {
+	position: relative;
+	border: solid;
+	border-radius: 50%;
+	right: 15%;
 }
-body{
-  background-image: url(https://base-ec2.akamaized.net/images/item/origin/c8e660ac17a77bdc1c0d9cbce1ed978f.jpg);
-  background-position: 30%;
+
+body {
+	background-image:
+		url(https://base-ec2.akamaized.net/images/item/origin/c8e660ac17a77bdc1c0d9cbce1ed978f.jpg);
+	background-position: 30%;
 }
-#text_size{
-  font-size: 30px;
+
+#text_size {
+	font-size: 30px;
 }
-#text_size_title{
-  font-size: 50px;
-  text-align:left;
+
+#text_size_title {
+	font-size: 50px;
+	text-align: left;
 }
-#introduction{
-  width: 40%;
-  position:absolute;
-  right: 0;
-  top:0;
-  font-size: 18px;
+
+#introduction {
+	width: 40%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 18px;
 }
-#picture_text{
-  width: 700px;
-  position: relative;
-  margin:auto;
+
+#picture_text {
+	width: 700px;
+	position: relative;
+	margin: auto;
 }
-#email_pos{
-  position:relative;
-  left:500px;
+
+#email_pos {
+	position: relative;
+	left: 500px;
 }
-#instagram_pos{
-  position:relative;
-  left: 1000px; ;
+
+#instagram_pos {
+	position: relative;
+	left: 1000px;;
 }
-#tel_pos{
-  position:relative;
-  left: 150px; ;
+
+#tel_pos {
+	position: relative;
+	left: 150px;;
 }
-  
+
+.blog {
+	background-color: #9dc6e1;
+	border-radius: 20px;
+	width: 50%;
+	min-height: 400px;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 70px;
+	position: relative;
+}
+
+.button_edit {
+	border-radius: 10px;
+	background-color: #ffff80;
+	color: black;
+	border: 2px solid white;
+}
+
+.button_delete {
+	border-radius: 10px;
+	background-color: #fb9384;
+	color: black;
+	border: 2px solid white;
+}

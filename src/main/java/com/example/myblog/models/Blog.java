@@ -1,5 +1,7 @@
 package com.example.myblog.models;
 
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,10 +17,13 @@ public class Blog {
 	private String title;
 	@Column
 	private String content;
+	@Column
+	private String username;
 
-	public Blog(String title, String content) {
-	    this.title = title;
+	public Blog(String title, String content, String username) {
+		this.title = title;
 		this.content = content;
+		this.username = username;
 	}
 
 	public Blog() {
@@ -49,4 +54,22 @@ public class Blog {
 		this.content = content;
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(content, id, title, username);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Blog other = (Blog) obj;
+		return Objects.equals(content, other.content) && Objects.equals(id, other.id)
+				&& Objects.equals(title, other.title) && Objects.equals(username, other.username);
+	}
+	
 }

@@ -1,5 +1,7 @@
 package com.example.myblog.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,31 +26,24 @@ public class BlogEditorController {
 		return "blogPicture.html";
 	}
 
-	@GetMapping("/blogEditor")
-	public String GetblogEditor() {
-		return "blogEditor.html";
-	}
-
 	@PostMapping("/blogEditor")
-	public ModelAndView login(@RequestParam String title, @RequestParam String content, ModelAndView mav) {
-		
-		if (blogService.createBlog(title, content)) {
-			mav.addObject("name", title);
-			mav.setViewName("blogPicture");
-		} else {
-			mav.setViewName("blogEditor");
-
-		}
+	public ModelAndView GetblogEditor(@RequestParam String username, ModelAndView mav) {
+		mav.addObject("username", username);
+		mav.setViewName("blogEditor");
 		return mav;
 	}
-//	@RequestMapping("/blogPicture")
-//	public String blog(Model model) {
-//		Blog blog=BlogRepository.findByTitle("");
-//		if(blog==null) {
-//			System.out.println("");
-//		}else
-//			model.addAttribute("bolg",blog);
-//		return "blogPicture";
-//	}
-	
+
+	@PostMapping("/addBlog")
+	public ModelAndView addBlog(@RequestParam String title, @RequestParam String content, @RequestParam String username,
+			ModelAndView mav) {
+		blogService.createBlog(title, content, username);
+		// 根据登录名字找到blogs *使用方法
+		List<Blog> blogs = blogService.findByUsername(username);
+		mav.addObject("blogs", blogs);
+
+		mav.addObject("name", username);
+		mav.setViewName("myBlog");
+
+		return mav;
+	}
 }

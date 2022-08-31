@@ -20,28 +20,27 @@
 	</h1>
 	<br>
 	<form action="/login" method="POST">
-		<div id="a">
+	  <div id="a">
 			<p id="error" th:if="${error}">Wrong username or password</p>
 			<div class="class_1">
-				<label id="name-label" for="name">UserName：</label> <input id="name"
-					type="text" name="username" placeholder="username" required>
+			  <label id="name-label" for="name">UserName：</label>
+			  <input id="name" type="text" name="username" placeholder="username" required>
 			</div>
 			<br>
-			<div class="class_2"></div>
-			<label id="name-label-1" class="class_1" for="pwd">Password：</label>
-			<input id="pwd" type="password" name="password"
+			<div class="class_2">
+			  <label id="name-label-1" class="class_1" for="pwd">Password：</label>
+			  <input id="pwd" type="password" name="password"
 				placeholder="password" required>
-		</div>
+			</div>
+	  </div>
 		<br>
 		<div class="class_4">
 			<input type="submit" value="Sign in"></input>
 		</div>
 	</form>
-	</div>
 	<p id="test-2">
 		Don't have an account? <a href="/register">Register</a>
 	</p>
-
 </body>
 </html>
 

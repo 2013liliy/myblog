@@ -1,34 +1,39 @@
-#text_1{
-    font-size: 20px;
+#text_1 {
+	font-size: 20px;
 }
-#text_2{
-    font-size: 30px;
-}
-#a{
-    margin :auto; 
-    width :300px;
-}
-#text_3{
-    margin :auto; 
-    width :300px;
-}
-#text_4{
-    border-style:none;
-    border-color:pink;
-    border-width: 20px;
-    border-radius: 5em;
-    padding: 30px;
-    width: 450px;
-    height: 550px;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin:auto;
-    top:20%;
-}
-#main {
-    background-image:url(https://www.to-be-beige.com/wp-content/uploads/image1.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: 0%;
-    padding: 100px 0;
-}   
 
+#text_2 {
+	font-size: 30px;
+}
+
+#a {
+	margin: auto;
+	width: 300px;
+}
+
+#text_3 {
+	margin: auto;
+	width: 300px;
+}
+
+#text_4 {
+	border-style: none;
+	border-color: pink;
+	border-width: 20px;
+	border-radius: 5em;
+	padding: 30px;
+	width: 450px;
+	height: 550px;
+	background-color: rgba(255, 255, 255, 0.7);
+	margin: auto;
+	top: 20%;
+}
+
+#main {
+	background-image:
+		url(https://www.to-be-beige.com/wp-content/uploads/image1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0%;
+	padding: 100px 0;
+}

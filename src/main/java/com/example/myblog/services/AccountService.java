@@ -2,14 +2,12 @@ package com.example.myblog.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.example.myblog.models.Account;
 import com.example.myblog.repositories.AccountRepository;
 
-
-
 @Service
 public class AccountService {
+
 	@Autowired
 	AccountRepository repository;
 
@@ -20,20 +18,14 @@ public class AccountService {
 		} else {
 			return true;
 		}
-
 	}
 
 	public boolean createAccount(String username, String password) {
-		if(repository.findByUsername(username)==null){
-			repository.save(new Account(username,password));
+		if (repository.findByUsername(username) == null) {
+			repository.save(new Account(username, password));
 			return true;
-		}else {
-		return false;
+		} else {
+			return false;
 		}
-
 	}
-	
-    		
-    
-	
 }

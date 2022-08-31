@@ -1,9 +1,9 @@
 package com.example.myblog.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.example.myblog.models.Account;
 import com.example.myblog.models.Blog;
 import com.example.myblog.repositories.BlogRepository;
 
@@ -12,25 +12,45 @@ public class BlogService {
 	@Autowired
 	private BlogRepository repository;
 
-	public boolean createBlog(String title, String content) {
-		
-		if (BlogRepository.findByTitle(title) == null) {
-			repository.save(new Blog(title, content));
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
-	public boolean validateAccount(String title, String content) {
-		Blog blog = BlogRepository.findByTitle(title);
-		if (blog== null) {
-			return false;
-		} else {
-			return true;
-		}
+	public void createBlog(String title, String content, String username) {
 
+		repository.save(new Blog(title, content, username));
 	}
-	
+
+	public boolean validateAccount(String title, String content) {
+		Blog blog = repository.findByTitle(title);
+		if (blog == null) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	public List<Blog> findAll() {
+		return repository.findAll();
+	}
+
+	// 根据username查找博客*声明方法
+	public List<Blog> findByUsername(String username) {
+
+		return repository.findByUsername(username);
+	}
+
+	// 删除博客内容
+	public void deleteById(Long id) {
+		repository.deleteById(id);
+	}
+
+	// 删除博客内容*声明方法
+	// public List<Blog> deleteByBlog() {
+
+	// return repository.deleteByBlog();
+	// }
+
+	// 修改博客内容*声明方法
+	// public List<Blog> updataBlog() {
+
+	// return updataBlog();
+	// }
 
 }

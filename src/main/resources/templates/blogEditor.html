@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-      <title>myBlog</title>
-      <link rel="stylesheet" href="/css/blogEditor.css">
-    </head>
-    <body>
-      <div id="frame">
-        <h1 id="title_text">Blog Editor</h1>
-        <hr>
-        <form action="/blogEditor" method="post">
-          <div id="title">
-            <label  for="title">title</label>
-            <input  id="title" type="text" name="title" placeholder="Please fill in the title">
-          </div>
-          <br>
-          <!--  <div id="content_introduction">
-            <label  for="content_introduction">content</label>
-            <input  id="content_introduction" type="text" name="content_introduction" placeholder="content introduction">
-          </div>-->
-          <br>
-          <div id="Edit_content">
-          <label  for="Edit_content">content</label>
-          <textarea  class="content" id="Edit_content" type="text" name="content"></textarea>
-          </div>
-          <br>
-          <div id="submit_text">
-            <input class="submit_color" type="submit" value="submit">
-          </div>
-        </form>
-      </div>
-    </body>
+<head>
+<meta charset="utf-8">
+<title>myBlog</title>
+<link rel="stylesheet" href="/css/blogEditor.css">
+</head>
+<body>
+	<p th:text="${username}"></p>
+	<div id="frame">
+		<h1 id="title_text">Blog Editor</h1>
+		<hr>
+		<form action="/addBlog" method="post">
+			<div id="title">
+				<label for="title">title</label> <input id="title" type="text"
+					name="title" placeholder="Please fill in the title" required>
+			</div>
+			<br>
+		    <br>
+			<div id="Edit_content">
+				<label id="content-lable" for="Edit_content">content</label>
+				<textarea class="content" id="Edit_content" type="text"
+					name="content" required></textarea>
+			</div>
+			<br>
+			<div id="submit_text">
+				<input class="submit_color" type="submit" value="submit"> <input
+					type="hidden" name="username" th:value="${username}">
+			</div>
+		</form>
+	</div>
+</body>
 </html>
