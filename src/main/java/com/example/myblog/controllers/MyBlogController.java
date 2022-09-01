@@ -1,10 +1,7 @@
 package com.example.myblog.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -30,6 +27,10 @@ public class MyBlogController {
 	@PostMapping("/deleteMyBlog")
 	public ModelAndView deleteBlog(@RequestParam Long id, ModelAndView mav) {
 		blogService.deleteById(id);
+		blogService.findById(id);
+		
+		mav.addObject("name", Blog.username);
+		mav.addObject("blogs", blogs);
 		mav.setViewName("myblog");
 
 		// 修改博客内容*使用方法

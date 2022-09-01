@@ -17,15 +17,6 @@ public class BlogService {
 		repository.save(new Blog(title, content, username));
 	}
 
-	public boolean validateAccount(String title, String content) {
-		Blog blog = repository.findByTitle(title);
-		if (blog == null) {
-			return false;
-		} else {
-			return true;
-		}
-	}
-
 	public List<Blog> findAll() {
 		return repository.findAll();
 	}
@@ -36,16 +27,14 @@ public class BlogService {
 		return repository.findByUsername(username);
 	}
 
-	// 删除博客内容
-	//public void deleteById(Long id) {
-		//repository.deleteById(id);
-	//}
-
 	// 删除博客内容*声明方法
-	// public List<Blog> deleteByBlog() {
+	public void deleteById(Long id) {
+		repository.deleteById(id);
+	}
 
-	// return repository.deleteByBlog();
-	// }
+	public Blog findById(Long id) {
+		return repository.findById(id).get();
+	}
 
 	// 修改博客内容*声明方法
 	// public List<Blog> updataBlog() {

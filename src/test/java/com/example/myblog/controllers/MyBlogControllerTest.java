@@ -13,7 +13,7 @@ import com.example.myblog.services.BlogService;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class myBlogControllerTest {
+public class MyBlogControllerTest {
 	@MockBean
 	private BlogService blogService;
 	
