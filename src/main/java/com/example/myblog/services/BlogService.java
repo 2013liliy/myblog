@@ -37,9 +37,9 @@ public class BlogService {
 	}
 
 	// 删除博客内容
-	public void deleteById(Long id) {
-		repository.deleteById(id);
-	}
+	//public void deleteById(Long id) {
+		//repository.deleteById(id);
+	//}
 
 	// 删除博客内容*声明方法
 	// public List<Blog> deleteByBlog() {
