@@ -42,6 +42,7 @@ public class LoginController {
 			// 根据登录名字找到blogs *使用方法
 			List<Blog> blogs = blogService.findByUsername(username);
 			mav.addObject("blogs", blogs);
+			System.out.println(blogs);
 			mav.setViewName("myBlog");
 		} else {
 			mav.addObject("error", true);

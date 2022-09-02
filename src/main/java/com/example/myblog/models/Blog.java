@@ -20,6 +20,14 @@ public class Blog {
 	@Column
 	private String username;
 
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	public Blog(String title, String content, String username) {
 		this.title = title;
 		this.content = content;

@@ -36,10 +36,16 @@ public class BlogService {
 		return repository.findById(id).get();
 	}
 
+	
+		
+		
+	
+
 	// 修改博客内容*声明方法
 	// public List<Blog> updataBlog() {
 
 	// return updataBlog();
 	// }
+
 
 }

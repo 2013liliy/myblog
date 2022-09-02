@@ -40,7 +40,7 @@
 			<tr>
 				<td>
 					<button class="button_edit">Edit</button> 
-					  <form>
+					  <form th: action="@{/deleteMyBlog}">
         			 <input type="hidden" name="id" th:value="${blog.id}">
           　　　　　
 					<button  class="button_delete">Delete </button></form>

@@ -1,5 +1,7 @@
 package com.example.myblog.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,6 +10,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.myblog.models.Blog;
 import com.example.myblog.services.BlogService;
+
+
 
 @Controller
 public class MyBlogController {
@@ -26,10 +30,12 @@ public class MyBlogController {
 
 	@PostMapping("/deleteMyBlog")
 	public ModelAndView deleteBlog(@RequestParam Long id, ModelAndView mav) {
+		System.out.println(id);
+		Blog blog=blogService.findById(id);
 		blogService.deleteById(id);
-		blogService.findById(id);
+		List<Blog> blogs=blogService.findByUsername(blog.getUsername());
 		
-		mav.addObject("name", Blog.username);
+		mav.addObject("name", blog.getUsername());
 		mav.addObject("blogs", blogs);
 		mav.setViewName("myblog");
 
