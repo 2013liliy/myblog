@@ -11,8 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.myblog.models.Blog;
 import com.example.myblog.services.BlogService;
 
-
-
 @Controller
 public class MyBlogController {
 
@@ -30,19 +28,28 @@ public class MyBlogController {
 
 	@PostMapping("/deleteMyBlog")
 	public ModelAndView deleteBlog(@RequestParam Long id, ModelAndView mav) {
-		System.out.println(id);
-		Blog blog=blogService.findById(id);
+		Blog blog = blogService.findById(id);
 		blogService.deleteById(id);
-		List<Blog> blogs=blogService.findByUsername(blog.getUsername());
-		
+		List<Blog> blogs = blogService.findByUsername(blog.getUsername());
+
 		mav.addObject("name", blog.getUsername());
 		mav.addObject("blogs", blogs);
 		mav.setViewName("myblog");
 
-		// 修改博客内容*使用方法
-		// List<Blog> blogs1 = blogService.updataBlog();
-		// mav.addObject("blogs", blogs1);
-		// mav.setViewName("myblog");
+		return mav;
+	}
+
+	// 修改博客内容*使用方法
+	@PostMapping("/editBlog")
+	public ModelAndView editBlog(@RequestParam Long id, @RequestParam String title, @RequestParam String content,
+			ModelAndView mav) {
+		blogService.editBlog(title, content, id);
+		Blog blog = blogService.findById(id);
+		List<Blog> blogs = blogService.findByUsername(blog.getUsername());
+		
+		mav.addObject("name", blog.getUsername());
+		mav.addObject("blogs", blogs);
+		mav.setViewName("myBlog");
 
 		return mav;
 	}

@@ -12,6 +12,7 @@
 |0830|blogの追加と照合機能を完成・ページにアクセスする際は名前を覚える、削除と編集機能を未完成|
 |0831|単体テスト・RegisterControllerTestとloginControllerTestを完成|
 |0901|単体テストを完成.delete機能を始める|
+|0902|delete機能を完成.edit機能を追加中|
 
 
 

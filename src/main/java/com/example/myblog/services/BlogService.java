@@ -16,6 +16,14 @@ public class BlogService {
 
 		repository.save(new Blog(title, content, username));
 	}
+	
+	public void editBlog(String title, String content,Long id) {
+     
+		Blog blog=repository.findById(id).get();
+		blog.setTitle(title);
+		blog.setContent(content);
+		repository.save(blog);
+	}
 
 	public List<Blog> findAll() {
 		return repository.findAll();
@@ -34,6 +42,17 @@ public class BlogService {
 
 	public Blog findById(Long id) {
 		return repository.findById(id).get();
+	}
+	
+   //编辑博客
+	public void editById(Long id) {
+		repository.editById(id);
+		
+	}
+
+	public void UpDateBlogById(Long id, String title, String content) {
+		
+		
 	}
 
 	

@@ -23,8 +23,8 @@
 			</p>
 			<a th:href="@{/blogPicture}">写真一覧</a>
 			<form th:action="@{/blogEditor}" method="post">
-				<input type="submit" value="add">
-				 <input type="hidden" name="username" th:value="${name}">
+				<input type="submit" value="add"> <input type="hidden"
+					name="username" th:value="${name}">
 			</form>
 		</div>
 	</div>
@@ -39,11 +39,14 @@
 			</tr>
 			<tr>
 				<td>
-					<button class="button_edit">Edit</button> 
-					  <form th: action="@{/deleteMyBlog}">
-        			 <input type="hidden" name="id" th:value="${blog.id}">
-          　　　　　
-					<button  class="button_delete">Delete </button></form>
+				   <form action="/editBlog" method="post">
+				    <input  type="hidden" name="id" th:value="${blog.id}">
+					<button class="button_edit">Edit</button></form>
+					<form action="/deleteMyBlog" method="post">
+						<input type="hidden" name="id" th:value="${blog.id}">
+
+						<button class="button_delete">Delete</button>
+					</form>
 				</td>
 			</tr>
 		</table>
